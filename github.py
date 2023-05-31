@@ -4,9 +4,7 @@ import smtplib
 from email.mime.text import MIMEText
 
 def get_pull_requests(repo_url):
-    # Set up authentication headers if needed
 
-    # Calculate the date range for the last week
     today = datetime.date.today()
     last_week = today - datetime.timedelta(days=7)
 
@@ -25,8 +23,9 @@ def get_pull_requests(repo_url):
 
     return pull_requests
 
+## AS not having smtp . I am printing the content
+
 def send_email(sender, recipient, subject, body):
-    # Set up email configuration
     smtp_server = 'your_smtp_server'
     smtp_port = 587
     smtp_username = 'your_smtp_username'
@@ -38,7 +37,6 @@ def send_email(sender, recipient, subject, body):
     msg['To'] = recipient
     msg['Subject'] = subject
 
-    # Connect to SMTP server and send emai
 
 def generate_email_content(pull_requests):
     content = 'Summary of Pull Requests in the Last Week:\n\n'
@@ -64,6 +62,3 @@ email_content = generate_email_content(pull_requests)
 sender = 'sender@example.com'
 recipient = 'recipient@example.com'
 subject = 'Summary of Pull Requests in the Last Week'
-
-# Send the email
-send_email(sender, recipient, subject, email_content)
