@@ -59,6 +59,6 @@ pull_requests = get_pull_requests(repository_url)
 email_content = generate_email_content(pull_requests)
 
 # Email details
-sender = 'sender@example.com'
-recipient = 'recipient@example.com'
-subject = 'Summary of Pull Requests in the Last Week'
+#sender = 'sender@example.com'
+#recipient = 'recipient@example.com'
+#subject = 'Summary of Pull Requests in the Last Week'
